@@ -27,7 +27,9 @@
    - iPad Mini (768px / 1024px)
    - Surface Pro 10 (912px / 1368px)
    - iPad Pro & iPad Pro 13 (834px / 1024px / 1194px / 1366px)
-   Show Hamburger Menu Button (.mobile-toggle) and hide .desktop-nav
+   Header Cleanliness:
+   - Show Hamburger Menu Button (.mobile-toggle) and hide .desktop-nav
+   - Remove Dark Mode, RTL, and Login buttons from header (available in drawer)
    ========================================================================== */
 @media (max-width: 1370px) {
   .desktop-nav {
@@ -37,15 +39,18 @@
   .mobile-toggle {
     display: inline-flex !important;
   }
+
+  /* Completely remove Dark Mode, RTL button, and Login button from header on iPad Mini, iPad Pro & iPad Pro 13 */
+  .site-header .header-actions .icon-btn,
+  .site-header .header-actions .btn-login {
+    display: none !important;
+  }
 }
 
 /* Tablets Landscape & Smaller Laptops (1024px) */
 @media (max-width: 1024px) {
-  .header-actions .icon-btn.desktop-only {
-    display: none;
-  }
-
-  .header-actions .btn-login {
+  .site-header .header-actions .icon-btn,
+  .site-header .header-actions .btn-login {
     display: none !important;
   }
 
