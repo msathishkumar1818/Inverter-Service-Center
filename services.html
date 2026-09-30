@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residential Repair Services | ResiVolt Home Inverter &amp; Generator Care</title>
+  <meta name="description"
+    content="Certified doorstep repairs for home inverters, tubular batteries, quiet standby generators, and automatic AMF changeover switches.">
+
+  <!-- Favicon / Brand Tab Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Core Design System & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- 1. Branded Preloader -->
+  <div id="preloader" class="preloader" role="status" aria-label="Loading ResiVolt Services">
+    <div class="preloader-brand">
+      <div class="preloader-logo-group">
+        <svg class="brand-logo-svg preloader-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#0f172a" />
+          <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+            stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+          <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+            stroke-linecap="round" />
+        </svg>
+        <div class="brand-text-block preloader-text-block">
+          <span class="brand-title preloader-brand-title">Resi<span>Volt</span></span>
+          <span class="brand-tagline preloader-brand-tagline">Home Power Care</span>
+        </div>
+      </div>
+      <div class="preloader-bar-bg">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Fixed Header (Compact Height, Single-Line Desktop) -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+
+      <!-- Brand Logo & Identity -->
+      <a href="index.html" class="brand-identity" aria-label="ResiVolt Home Generator and Inverter Service">
+        <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#0f172a" />
+          <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+            stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+          <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+            stroke-linecap="round" />
+        </svg>
+        <div class="brand-text-block">
+          <span class="brand-title">Resi<span>Volt</span></span>
+          <span class="brand-tagline">Home Power Care</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Items -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <!-- 1. Home (Click-only dropdown) -->
+        <div class="nav-dropdown" id="homeDropdown">
+          <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="index.html" class="dropdown-item">
+                <div>
+                  <strong>Home 1</strong>
+                  <span class="dropdown-item-desc">Residential Power Hub</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="home-2.html" class="dropdown-item">
+                <div>
+                  <strong>Home 2</strong>
+                  <span class="dropdown-item-desc">Rapid Support &amp; Care</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 2. Services (Active) -->
+        <a href="services.html" class="nav-link active">Services</a>
+
+        <!-- 3. Products -->
+        <a href="products.html" class="nav-link">Products</a>
+
+        <!-- 4. AMC Plans -->
+        <a href="amc.html" class="nav-link">AMC Plans</a>
+
+        <!-- 5. About (Mandatory) -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 6. Contact -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Controls: RTL, Dark Mode, Login CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="icon-btn desktop-only" data-toggle-rtl aria-label="Toggle RTL or LTR layout"
+          title="Switch RTL/LTR">
+          <span class="rtl-text-indicator">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="icon-btn desktop-only" data-toggle-theme aria-label="Toggle Dark Mode"
+          title="Toggle Theme">
+          <svg class="theme-icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="login.html" class="btn-login" aria-label="Customer Login and Registration">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button type="button" class="mobile-toggle" id="mobileMenuOpen" aria-label="Open Mobile Menu"
+          aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3. Mobile Navigation Drawer & Backdrop -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-identity">
+        <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#0f172a" />
+          <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+            stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+          <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+            stroke-linecap="round" />
+        </svg>
+        <div class="brand-text-block">
+          <span class="brand-title">Resi<span>Volt</span></span>
+          <span class="brand-tagline">Home Power Care</span>
+        </div>
+      </div>
+      <button type="button" class="icon-btn" id="mobileMenuClose" aria-label="Close Mobile Navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <!-- Mobile Home Accordion -->
+      <div class="mobile-accordion">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle">
+          <span>Home</span>
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-accordion-content">
+          <a href="index.html" class="mobile-sub-link">Home 1 (Power Hub)</a>
+          <a href="home-2.html" class="mobile-sub-link">Home 2 (Rapid Support)</a>
+        </div>
+      </div>
+
+      <a href="services.html" class="mobile-nav-link active">Services</a>
+      <a href="products.html" class="mobile-nav-link">Products</a>
+      <a href="amc.html" class="mobile-nav-link">AMC Plans</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-toggles-row">
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <button type="button" class="icon-btn" data-toggle-theme aria-label="Toggle Theme in Mobile Drawer">
+            <svg class="theme-icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+            </svg>
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button type="button" class="icon-btn" data-toggle-rtl aria-label="Toggle RTL in Mobile Drawer">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+        </div>
+        <span class="mobile-toggle-badge">Preferences</span>
+      </div>
+      <a href="login.html" class="btn-login" style="width:100%; justify-content:center;" aria-label="Customer Login or Register">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Customer Login / Register</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 4. Global Auth Modal (Login / Register) -->
+  <div class="modal-overlay" id="authModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="auth-modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Customer Portal</h3>
+        <button type="button" class="modal-close" aria-label="Close Modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="auth-tab-btn active" data-tab="login" role="tab" aria-selected="true">Sign
+            In</button>
+          <button type="button" class="auth-tab-btn" data-tab="register" role="tab" aria-selected="false">New
+            Registration</button>
+        </div>
+
+        <form id="authPanel-login" class="auth-form-panel active"
+          onsubmit="event.preventDefault(); alert('Signed in successfully!');">
+          <div class="form-group">
+            <label class="form-label" for="sloginEmail">Email or Mobile Number</label>
+            <input type="text" id="sloginEmail" class="form-input" placeholder="e.g. user@home.com or 9876543210"
+              required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sloginPass">Password</label>
+            <input type="password" id="sloginPass" class="form-input" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn-auth-submit">Sign In to Service Account</button>
+        </form>
+
+        <form id="authPanel-register" class="auth-form-panel"
+          onsubmit="event.preventDefault(); alert('Account created! You can now book service visits.');">
+          <div class="form-group">
+            <label class="form-label" for="sregName">Full Name</label>
+            <input type="text" id="sregName" class="form-input" placeholder="e.g. Rajesh Kumar" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sregPhone">Mobile Number (For Technician Updates)</label>
+            <input type="tel" id="sregPhone" class="form-input" placeholder="10-digit mobile number" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sregDevice">Primary Equipment at Home</label>
+            <select id="sregDevice" class="form-input">
+              <option value="inverter">Home Inverter &amp; Battery System</option>
+              <option value="generator">Home Backup Generator (1-10 kVA)</option>
+              <option value="both">Both Generator &amp; Inverter</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-auth-submit">Create Residential Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT: EXACTLY 5 MAIN CONTENT SECTIONS -->
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1: HERO OVERVIEW & DIAGNOSTIC SELECTOR
+         ========================================================================== -->
+    <section class="page-inner-hero" aria-label="Services Overview">
+      <img src="assets/images/services/p5.jpg" alt="Certified electrical engineer testing equipment"
+        class="page-inner-hero-bg" width="1920" height="600" loading="eager">
+
+      <div class="page-inner-hero-container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="hero-breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="hero-breadcrumb-sep">/</span>
+          <span class="hero-breadcrumb-current">Services</span>
+        </nav>
+
+        <h1 class="page-inner-hero-title">
+          Residential Generator &amp; Inverter Services
+        </h1>
+
+        <p class="page-inner-hero-desc">
+          Certified diagnostics, component-level board repairs, battery health reconditioning, and doorstep maintenance
+          across all domestic models.
+        </p>
+
+        <!-- Trust Badges Row -->
+        <div class="hero-trust-pills-row">
+          <div class="hero-trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span>100% Home Dedicated Techs</span>
+          </div>
+          <div class="hero-trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <span>&lt;45-Min Emergency SLA</span>
+          </div>
+          <div class="hero-trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span>90-Day Spares Warranty</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: ALTERNATING RESIDENTIAL SERVICE ROWS (Unique Asymmetric Layout)
+         ========================================================================== -->
+    <section class="site-section" aria-label="Detailed Service Catalog">
+      <div class="container">
+        <div class="service-rows-container">
+
+          <!-- Row 1: Inverter Board Repair -->
+          <article class="service-media-row" id="inverter-service">
+            <div class="service-media-img-wrap">
+              <img src="assets/images/services/p6.jpg" alt="Inverter printed circuit board repair and testing"
+                width="500" height="320">
+            </div>
+            <div class="service-media-content">
+              <div class="service-chips-row">
+                <span class="service-chip">Pure Sine Wave</span>
+                <span class="service-chip">All Brands Supported</span>
+              </div>
+              <h2 class="service-card-title" style="font-size:1.75rem;">Pure Sine Wave Inverter Calibration &amp; Board
+                Repair</h2>
+              <p class="service-card-desc" style="font-size:1rem;">
+                On-site replacement of blown MOSFETs, micro-controller re-flashing, input voltage sensor realignment,
+                and transformer vibration reduction.
+              </p>
+              <ul class="service-bullet-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Eliminates humming sounds in residential ceiling fans and home theater systems.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Ensures seamless sub-10ms changeover so Wi-Fi routers never reboot.</span>
+                </li>
+              </ul>
+              <div>
+                <button type="button" class="btn-primary" data-open-auth>Request Inverter Service</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Row 2: Home Generator Tuning (Reverse) -->
+          <article class="service-media-row reverse" id="generator-repair">
+            <div class="service-media-img-wrap">
+              <img src="assets/images/services/p7.jpg" alt="Residential quiet standby generator engine tuning"
+                width="500" height="320">
+            </div>
+            <div class="service-media-content">
+              <div class="service-chips-row">
+                <span class="service-chip" style="background:var(--volt-cyan-light); color:var(--volt-cyan);">1 kVA – 10
+                  kVA Units</span>
+                <span class="service-chip">Quiet Sound Dampers</span>
+              </div>
+              <h2 class="service-card-title" style="font-size:1.75rem;">Quiet Generator Overhaul &amp; Engine Tuning
+              </h2>
+              <p class="service-card-desc" style="font-size:1rem;">
+                Carburetor ultrasonic cleaning, automatic voltage regulator (AVR) calibration, spark plug gap tuning,
+                and fresh synthetic engine oil change.
+              </p>
+              <ul class="service-bullet-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Guaranteed easy one-pull or electric push-button start in cold weather.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Acoustic canopy damper alignment to minimize residential neighborhood noise.</span>
+                </li>
+              </ul>
+              <div>
+                <button type="button" class="btn-primary" data-open-auth>Request Generator Service</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Row 3: Battery Care -->
+          <article class="service-media-row" id="battery-health">
+            <div class="service-media-img-wrap">
+              <img src="assets/images/services/p8.jpg"
+                alt="Electrolyte specific gravity measurement and cell restoration" width="500" height="320">
+            </div>
+            <div class="service-media-content">
+              <div class="service-chips-row">
+                <span class="service-chip">Tubular &amp; Lithium</span>
+                <span class="service-chip">Cell Desulfation</span>
+              </div>
+              <h2 class="service-card-title" style="font-size:1.75rem;">Battery Health Diagnostic &amp; Capacity
+                Recovery</h2>
+              <p class="service-card-desc" style="font-size:1rem;">
+                Individual cell specific gravity analysis with digital hydrometers, lead plate desulfation, terminal
+                corrosion removal, and distilled water restoration.
+              </p>
+              <ul class="service-bullet-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Recovers lost backup hours and prevents acid gas leakage inside utility closets.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Accurate battery health score report provided before recommending replacements.</span>
+                </li>
+              </ul>
+              <div>
+                <button type="button" class="btn-primary" data-open-auth>Request Battery Diagnostic</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Row 4: AMF Changeover (Reverse) -->
+          <article class="service-media-row reverse" id="amf-installation">
+            <div class="service-media-img-wrap">
+              <img src="assets/images/services/p9.jpg" alt="Automatic transfer switch panel wiring and safety audit"
+                width="500" height="320">
+            </div>
+            <div class="service-media-content">
+              <div class="service-chips-row">
+                <span class="service-chip">Hands-Free Automation</span>
+                <span class="service-chip">Earthing &amp; Surge Audit</span>
+              </div>
+              <h2 class="service-card-title" style="font-size:1.75rem;">AMF Auto Transfer Switch &amp; Safety Wiring
+                Audit</h2>
+              <p class="service-card-desc" style="font-size:1rem;">
+                Installation and maintenance of micro-processor automatic changeover switches that detect power
+                blackouts and start backup power without manual intervention.
+              </p>
+              <ul class="service-bullet-list">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Prevents dangerous reverse-feed currents that damage home appliances.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Earth pit resistance measurement to protect smart homes from lightning surges.</span>
+                </li>
+              </ul>
+              <div>
+                <button type="button" class="btn-primary" data-open-auth>Request AMF Installation</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: DIAGNOSTIC PROTOCOL & SAFETY STANDARDS (Visual Tool Bench)
+         ========================================================================== -->
+    <section class="site-section" aria-label="Safety Protocols">
+      <div class="container toolbench-wrap">
+        <div class="toolbench-img-frame">
+          <img src="assets/images/sections/p10.jpg"
+            alt="Certified technician diagnostic workbench and calibrated meters" width="600" height="420">
+        </div>
+
+        <div>
+          <span class="section-tag">Quality Assurance</span>
+          <h2 class="section-title">The ResiVolt 36-Point Doorstep Audit</h2>
+          <p class="section-subtitle">
+            Every service visit includes an exhaustive safety audit to ensure your home backup system operates without
+            fire hazard, fume leakage, or appliance damage.
+          </p>
+
+          <div class="toolbench-metrics-grid" style="margin-top:1.75rem;">
+            <div class="toolbench-metric-card">
+              <span class="toolbench-metric-num">36</span>
+              <span class="toolbench-metric-title">Point Inspection</span>
+              <p class="toolbench-metric-desc">Terminal torque, cable heating, electrolyte levels, and earthing
+                impedance.</p>
+            </div>
+
+            <div class="toolbench-metric-card">
+              <span class="toolbench-metric-num">&plusmn;2%</span>
+              <span class="toolbench-metric-title">Voltage Regulation</span>
+              <p class="toolbench-metric-desc">Pure 230V sine wave certified to safeguard expensive inverter
+                refrigerators and TVs.</p>
+            </div>
+
+            <div class="toolbench-metric-card">
+              <span class="toolbench-metric-num">100%</span>
+              <span class="toolbench-metric-title">OEM Genuine Spares</span>
+              <p class="toolbench-metric-desc">Factory-sealed components directly from Honda, Microtek, Exide, and
+                Luminous.</p>
+            </div>
+
+            <div class="toolbench-metric-card">
+              <span class="toolbench-metric-num">6 Mos</span>
+              <span class="toolbench-metric-title">Service Warranty</span>
+              <p class="toolbench-metric-desc">Comprehensive digital warranty card emailed immediately after service
+                handover.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: DOORSTEP RESIDENTIAL SERVICES IN ACTION (4 Visual Action Cards)
+         ========================================================================== -->
+    <section class="site-section bg-elevated" id="service-gallery" aria-label="Doorstep Service Actions">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Residential Field Care</span>
+          <h2 class="section-title">Doorstep Home Services in Action</h2>
+          <p class="section-subtitle">
+            Certified residential technicians performing live calibrations, diagnostics, and repairs.
+          </p>
+        </div>
+
+        <div class="service-actions-grid-4">
+          <!-- Card 1: Inverter Calibration -->
+          <article class="service-action-card">
+            <h3 class="service-action-title">Inverter Board Calibration</h3>
+            <div class="service-action-img-wrap">
+              <img src="assets/images/services/inverter-service.jpg"
+                alt="Certified technician calibrating home pure sine wave inverter board" width="400" height="240"
+                loading="lazy">
+            </div>
+          </article>
+
+          <!-- Card 2: Generator Overhaul -->
+          <article class="service-action-card">
+            <h3 class="service-action-title">Quiet Generator Engine </h3>
+            <div class="service-action-img-wrap">
+              <img src="assets/images/services/generator-repair.jpg"
+                alt="Certified technician tuning residential soundproof generator engine" width="400" height="240"
+                loading="lazy">
+            </div>
+          </article>
+
+          <!-- Card 3: Battery Diagnostic -->
+          <article class="service-action-card">
+            <h3 class="service-action-title">Battery Diagnostic Care</h3>
+            <div class="service-action-img-wrap">
+              <img src="assets/images/services/battery-health.jpg"
+                alt="Certified technician measuring tubular battery specific gravity and health" width="400"
+                height="240" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Card 4: AMF Panel Setup -->
+          <article class="service-action-card">
+            <h3 class="service-action-title">AMF Automatic Switch </h3>
+            <div class="service-action-img-wrap">
+              <img src="assets/images/services/amf-installation.jpg"
+                alt="Certified technician installing automatic mains transfer switch panel" width="400" height="240"
+                loading="lazy">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: GUARANTEED DOORSTEP BOOKING CTA (Last Content Section)
+         ========================================================================== -->
+    <section class="site-section" aria-label="Book Doorstep Service">
+      <div class="container">
+        <div class="services-cta-box">
+          <span class="section-tag">
+            Fixed Doorstep Pricing &bull; No Surprises
+          </span>
+          <h2 class="services-cta-title">
+            Ready for a Doorstep Power Health Check?
+          </h2>
+          <p class="services-cta-desc">
+            Our certified technician visits your home with full testing gear, checks battery gravity, inspects circuit
+            boards, and provides an itemized digital estimate before starting work.
+          </p>
+          <div class="services-cta-actions">
+            <button type="button" class="btn-primary" data-open-auth>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Schedule Service Visit</span>
+            </button>
+            <a href="tel:18004197693" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>Emergency Line: 1800&#8209;419&#8209;7693</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scroll-To-Top Button -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-identity">
+            <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none">
+              <rect width="48" height="48" rx="12" fill="#0f172a" />
+              <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+                stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+              <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+            <div class="brand-text-block">
+              <span class="brand-title">Resi<span>Volt</span></span>
+              <span class="brand-tagline">Home Power Care</span>
+            </div>
+          </a>
+          <p>
+            Dedicated home generator and residential inverter care center. Providing doorstep repair, battery health
+            checks, periodic servicing, and AMC coverage for uninterrupted residential power.
+          </p>
+          <div class="footer-emergency-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>Emergency Home Line: 1800&#8209;419&#8209;7693</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Home Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#generator-repair">Home Generator Repair</a></li>
+            <li><a href="services.html#inverter-service">Inverter Sine Wave Service</a></li>
+            <li><a href="services.html#battery-health">Tubular &amp; Lithium Battery Care</a></li>
+            <li><a href="services.html#installation">Doorstep Installation</a></li>
+            <li><a href="services.html#amc-maintenance">Pre-Monsoon Health Check</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About ResiVolt</a></li>
+            <li><a href="products.html">Home Generators &amp; Inverters</a></li>
+            <li><a href="amc.html">Residential AMC Plans</a></li>
+            <li><a href="contact.html">Service Coverage Map</a></li>
+            <li><a href="contact.html#book">Book Service Visit</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Service Support</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Doorstep coverage across all central residential zones and suburbs</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Mon – Sun: 7:30 AM – 9:30 PM (24/7 Breakdown Dispatch)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 ResiVolt Power Care. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Safety Standards</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

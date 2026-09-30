@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Login &amp; Portal | ResiVolt Dedicated Home Generator &amp; Inverter Specialists</title>
+  <meta name="description"
+    content="Sign in to your ResiVolt customer account to track doorstep technician dispatches, view AMC maintenance schedules, and manage home inverter and generator service records.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Core Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="login-page-body">
+
+  <!-- 1. Branded Preloader -->
+  <div id="preloader" class="preloader" role="status" aria-label="Loading ResiVolt Customer Portal">
+    <div class="preloader-brand">
+      <div class="preloader-logo-group">
+        <svg class="brand-logo-svg preloader-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#0f172a" />
+          <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+            stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+          <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+            stroke-linecap="round" />
+        </svg>
+        <div class="brand-text-block preloader-text-block">
+          <span class="brand-title preloader-brand-title">Resi<span>Volt</span></span>
+          <span class="brand-tagline preloader-brand-tagline">Home Power Care</span>
+        </div>
+      </div>
+      <div class="preloader-bar-bg">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOP MINIMAL BRANDING BAR (Distraction-Free: No Standard Header/Navigation)
+       Contains: Brand Logo, Brand Name, Small Text, Dark Button, RTL Button
+       ========================================================================== -->
+  <header class="login-topbar" role="banner">
+    <!-- Brand Identity (Logo + Brand Name + Small Text) -->
+    <a href="index.html" class="brand-identity login-topbar-brand" aria-label="Return to ResiVolt Homepage">
+      <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="48" height="48" rx="12" fill="#0f172a" />
+        <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+          stroke-width="2.5" stroke-linejoin="round" />
+        <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+        <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+          stroke-linecap="round" />
+      </svg>
+      <div class="brand-text-block">
+        <span class="brand-title">Resi<span>Volt</span></span>
+        <span class="brand-tagline">Home Power Care</span>
+      </div>
+    </a>
+
+    <!-- Top Utility Controls: RTL Button, Dark Mode Button & Back to Home -->
+    <div class="login-topbar-controls">
+      <!-- RTL Toggle Button -->
+      <button type="button" class="icon-btn" data-toggle-rtl aria-label="Toggle Text Direction (LTR / RTL)">
+        <span class="rtl-text-indicator">RTL</span>
+      </button>
+
+      <!-- Dark Mode Toggle Button -->
+      <button type="button" class="icon-btn" data-toggle-theme aria-label="Toggle Color Theme (Dark / Light)">
+        <svg class="theme-icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN DEDICATED LOGIN & REGISTRATION EXPERIENCE
+       ========================================================================== -->
+  <main class="login-main-container">
+    <!-- Ambient Background Glows -->
+    <div class="login-bg-glow login-bg-glow-1"></div>
+    <div class="login-bg-glow login-bg-glow-2"></div>
+
+    <div class="login-layout-card">
+      <!-- Left: Form Card Area -->
+      <div class="login-form-area">
+        <!-- Tab Selector: Sign In vs Create Account -->
+        <nav class="login-tabs-nav" aria-label="Authentication Options">
+          <button type="button" class="login-tab-btn active" id="tabSignInBtn" onclick="switchLoginTab('signin')">
+            Sign In
+          </button>
+          <button type="button" class="login-tab-btn" id="tabRegisterBtn" onclick="switchLoginTab('register')">
+            Register
+          </button>
+        </nav>
+
+        <!-- Dynamic Alert Feedback Box -->
+        <div id="loginAlertBox" class="login-alert-box" role="alert"></div>
+
+        <!-- ================= PANEL 1: CUSTOMER SIGN IN ================= -->
+        <div id="panelSignIn" class="login-form-panel active">
+          <div class="login-header-group">
+            <h1 class="login-title">Welcome Back</h1>
+            <p class="login-subtitle">
+              Manage your residential backup power health, live doorstep dispatch requests, and AMC service records.
+            </p>
+          </div>
+
+          <form id="signInForm" onsubmit="handleSignInSubmit(event)">
+            <!-- Mobile / Email Field -->
+            <div class="login-field-wrap">
+              <label for="loginUser">Mobile Number or Email</label>
+              <div class="login-input-inner">
+                <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <input type="text" id="loginUser" class="login-input-field" placeholder="e.g. 9876543210 or name@email.com"
+                  required autocomplete="username">
+              </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="login-field-wrap">
+              <label for="loginPass">Password</label>
+              <div class="login-input-inner">
+                <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <input type="password" id="loginPass" class="login-input-field" placeholder="Enter your portal password"
+                  required autocomplete="current-password">
+                <button type="button" class="login-password-toggle" onclick="togglePasswordVisibility('loginPass', this)"
+                  aria-label="Toggle password visibility">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Extras: Remember Me & Forgot Password -->
+            <div class="login-extras-row">
+              <label class="login-remember-label">
+                <input type="checkbox" id="rememberMe" checked>
+                <span>Remember this device</span>
+              </label>
+              <a href="javascript:void(0)" onclick="alert('Password reset instructions will be sent via SMS to your registered mobile number.')" class="login-forgot-link">
+                Forgot password?
+              </a>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="login-submit-btn" id="signInSubmitBtn">
+              <span>Sign In to Power Portal</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Alternative Quick Assistance Strip -->
+          <div style="margin-top: 1.75rem; text-align: center; font-size: 0.8125rem; color: var(--text-muted); border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
+            <span>Need immediate breakdown support without logging in?</span>
+            <div style="margin-top: 0.5rem;">
+              <a href="tel:18004197693" style="color: var(--accent-primary); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Call Emergency Line: 1800&#8209;419&#8209;7693</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= PANEL 2: NEW REGISTRATION ================= -->
+        <div id="panelRegister" class="login-form-panel">
+          <div class="login-header-group">
+            <h2 class="login-title">Register Your Home</h2>
+            <p class="login-subtitle">
+              Enroll your inverter, battery bank, or residential generator for fast doorstep dispatch and certified technician service.
+            </p>
+          </div>
+
+          <form id="registerForm" onsubmit="handleRegisterSubmit(event)">
+            <!-- Full Name -->
+            <div class="login-field-wrap">
+              <label for="regName">Full Name</label>
+              <div class="login-input-inner">
+                <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <input type="text" id="regName" class="login-input-field" placeholder="e.g. S. Ramanathan" required autocomplete="name">
+              </div>
+            </div>
+
+            <!-- Mobile Phone -->
+            <div class="login-field-wrap">
+              <label for="regPhone">Mobile Number (For Technician SMS Tracking)</label>
+              <div class="login-input-inner">
+                <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+                <input type="tel" id="regPhone" class="login-input-field" placeholder="10-digit mobile number" required pattern="[0-9]{10}" autocomplete="tel">
+              </div>
+            </div>
+
+            <!-- Home Power Equipment Type -->
+            <div class="login-field-wrap">
+              <label for="regEquipment">Primary Backup Power Setup</label>
+              <div class="login-input-inner">
+                <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <select id="regEquipment" class="login-input-field" required>
+                  <option value="" disabled selected>Select Your Household System</option>
+                  <option value="inverter_tubular">Pure Sine Wave Inverter + Tubular Battery</option>
+                  <option value="generator_silent">Silent Standby Generator (2kVA – 10kVA)</option>
+                  <option value="solar_hybrid">Solar Hybrid Inverter &amp; Lithium Storage</option>
+                  <option value="dual_system">Complete Dual System (Generator + Inverter)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Create Password -->
+            <div class="login-field-wrap">
+              <label for="regPass">Create Secure Password</label>
+              <div class="login-input-inner">
+                <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <input type="password" id="regPass" class="login-input-field" placeholder="At least 6 characters" required minlength="6" autocomplete="new-password">
+                <button type="button" class="login-password-toggle" onclick="togglePasswordVisibility('regPass', this)" aria-label="Toggle password visibility">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Terms Agreement Checkbox -->
+            <div class="login-extras-row">
+              <label class="login-remember-label">
+                <input type="checkbox" id="regTerms" required>
+                <span>I agree to ResiVolt doorstep service terms and privacy policy</span>
+              </label>
+            </div>
+
+            <!-- Submit Registration Button -->
+            <button type="submit" class="login-submit-btn" id="registerSubmitBtn">
+              <span>Complete Customer Registration</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right: Feature Showcase Area (Branded Visual Banner) -->
+      <aside class="login-showcase-area" aria-label="ResiVolt Customer Portal Benefits">
+        <div class="login-showcase-glow"></div>
+
+        <div>
+          <span class="login-showcase-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span>Doorstep Power Hub</span>
+          </span>
+
+          <h2 class="login-showcase-title">
+            Uninterrupted Power Care for <span>14,000+ Homes</span>
+          </h2>
+          <p class="login-showcase-desc">
+            Your personal customer portal puts licensed residential electrical engineers, battery testing diagnostics, and priority dispatch right at your fingertips.
+          </p>
+
+          <ul class="login-perks-list">
+            <li class="login-perk-item">
+              <svg class="login-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div class="login-perk-text">
+                <strong>Live Technician Dispatch GPS</strong>
+                <span>Instant SMS notifications and real-time arrival estimates.</span>
+              </div>
+            </li>
+            <li class="login-perk-item">
+              <svg class="login-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <div class="login-perk-text">
+                <strong>AMC Coverage &amp; Digital Logs</strong>
+                <span>One-click access to battery gravity records, coil tests, and warranties.</span>
+              </div>
+            </li>
+            <li class="login-perk-item">
+              <svg class="login-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <div class="login-perk-text">
+                <strong>100% Genuine Certified Spares</strong>
+                <span>Original MOSFETs, high-output AVRs, and direct manufacturer relays.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Verified Customer Snippet -->
+        <div class="login-testimonial-box">
+          <p class="login-testimonial-quote">
+            "ResiVolt diagnosed our inverter overload within 45 minutes on a stormy evening. The portal makes annual servicing effortless."
+          </p>
+          <div class="login-testimonial-author">
+            &mdash; S. Ramanathan, OMR Villa Resident
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Core JavaScript & Interactive Logic -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Tab Switcher (Customer Sign In vs New Registration)
+    function switchLoginTab(tab) {
+      const signInBtn = document.getElementById('tabSignInBtn');
+      const registerBtn = document.getElementById('tabRegisterBtn');
+      const panelSignIn = document.getElementById('panelSignIn');
+      const panelRegister = document.getElementById('panelRegister');
+      const alertBox = document.getElementById('loginAlertBox');
+
+      if (alertBox) {
+        alertBox.className = 'login-alert-box';
+        alertBox.style.display = 'none';
+      }
+
+      if (tab === 'signin') {
+        signInBtn.classList.add('active');
+        registerBtn.classList.remove('active');
+        panelSignIn.classList.add('active');
+        panelRegister.classList.remove('active');
+      } else {
+        registerBtn.classList.add('active');
+        signInBtn.classList.remove('active');
+        panelRegister.classList.add('active');
+        panelSignIn.classList.remove('active');
+      }
+    }
+
+    // Toggle Password Visibility
+    function togglePasswordVisibility(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (!input) return;
+
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+
+      btn.innerHTML = isPassword
+        ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>'
+        : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+    }
+
+    // Handle Sign In Submit
+    function handleSignInSubmit(event) {
+      event.preventDefault();
+      const user = document.getElementById('loginUser').value.trim();
+      const alertBox = document.getElementById('loginAlertBox');
+      const submitBtn = document.getElementById('signInSubmitBtn');
+
+      if (!user) return;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Verifying credentials...</span>';
+
+      setTimeout(() => {
+        alertBox.className = 'login-alert-box success';
+        alertBox.innerHTML = '&#10003; <strong>Login Successful!</strong> Welcome back, redirecting to your Power Portal...';
+        alertBox.style.display = 'block';
+
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1200);
+      }, 700);
+    }
+
+    // Handle Register Submit
+    function handleRegisterSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('regName').value.trim();
+      const phone = document.getElementById('regPhone').value.trim();
+      const alertBox = document.getElementById('loginAlertBox');
+      const submitBtn = document.getElementById('registerSubmitBtn');
+
+      if (!name || !phone) return;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Registering home setup...</span>';
+
+      setTimeout(() => {
+        alertBox.className = 'login-alert-box success';
+        alertBox.innerHTML = `&#10003; <strong>Account Registered!</strong> Welcome, ${name}. Your priority doorstep service ID has been sent via SMS.`;
+        alertBox.style.display = 'block';
+
+        setTimeout(() => {
+          switchLoginTab('signin');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Complete Customer Registration</span>';
+        }, 1800);
+      }, 800);
+    }
+  </script>
+</body>
+
+</html>

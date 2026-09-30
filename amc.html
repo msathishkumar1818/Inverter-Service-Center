@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residential AMC Plans | ResiVolt Home Inverter &amp; Generator Protection</title>
+  <meta name="description"
+    content="Annual Maintenance Contracts (AMC) for home inverters, battery banks, and standby generators with scheduled doorstep checkups, free electrolyte top-up, and zero callout fees.">
+
+  <!-- Favicon / Brand Tab Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Core Design System & Responsive Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- 1. Branded Preloader -->
+  <div id="preloader" class="preloader" role="status" aria-label="Loading ResiVolt AMC Plans">
+    <div class="preloader-brand">
+      <div class="preloader-logo-group">
+        <svg class="brand-logo-svg preloader-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#0f172a" />
+          <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+            stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+          <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+            stroke-linecap="round" />
+        </svg>
+        <div class="brand-text-block preloader-text-block">
+          <span class="brand-title preloader-brand-title">Resi<span>Volt</span></span>
+          <span class="brand-tagline preloader-brand-tagline">Home Power Care</span>
+        </div>
+      </div>
+      <div class="preloader-bar-bg">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Fixed Header (Compact Height, Single-Line Desktop) -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+
+      <!-- Brand Logo & Identity -->
+      <a href="index.html" class="brand-identity" aria-label="ResiVolt Home Generator and Inverter Service">
+        <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#0f172a" />
+          <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+            stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+          <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+            stroke-linecap="round" />
+        </svg>
+        <div class="brand-text-block">
+          <span class="brand-title">Resi<span>Volt</span></span>
+          <span class="brand-tagline">Home Power Care</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation - Exactly 6 Items -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <!-- 1. Home (Click-only dropdown) -->
+        <div class="nav-dropdown" id="homeDropdown">
+          <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="index.html" class="dropdown-item">
+                <div>
+                  <strong>Home 1</strong>
+                  <span class="dropdown-item-desc">Residential Power Hub</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="home-2.html" class="dropdown-item">
+                <div>
+                  <strong>Home 2</strong>
+                  <span class="dropdown-item-desc">Rapid Support &amp; Care</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 2. Services -->
+        <a href="services.html" class="nav-link">Services</a>
+
+        <!-- 3. Products -->
+        <a href="products.html" class="nav-link">Products</a>
+
+        <!-- 4. AMC Plans (Active) -->
+        <a href="amc.html" class="nav-link active">AMC Plans</a>
+
+        <!-- 5. About (Mandatory) -->
+        <a href="about.html" class="nav-link">About</a>
+
+        <!-- 6. Contact -->
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Controls: RTL, Dark Mode, Login CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="icon-btn desktop-only" data-toggle-rtl aria-label="Toggle RTL or LTR layout"
+          title="Switch RTL/LTR">
+          <span class="rtl-text-indicator">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="icon-btn desktop-only" data-toggle-theme aria-label="Toggle Dark Mode"
+          title="Toggle Theme">
+          <svg class="theme-icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="login.html" class="btn-login" aria-label="Customer Login and Registration">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button type="button" class="mobile-toggle" id="mobileMenuOpen" aria-label="Open Mobile Menu"
+          aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3. Mobile Navigation Drawer & Backdrop -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-identity">
+        <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="#0f172a" />
+          <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+            stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+          <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+            stroke-linecap="round" />
+        </svg>
+        <div class="brand-text-block">
+          <span class="brand-title">Resi<span>Volt</span></span>
+          <span class="brand-tagline">Home Power Care</span>
+        </div>
+      </div>
+      <button type="button" class="icon-btn" id="mobileMenuClose" aria-label="Close Mobile Navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <!-- Mobile Home Accordion -->
+      <div class="mobile-accordion">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle">
+          <span>Home</span>
+          <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-accordion-content">
+          <a href="index.html" class="mobile-sub-link">Home 1 (Power Hub)</a>
+          <a href="home-2.html" class="mobile-sub-link">Home 2 (Rapid Support)</a>
+        </div>
+      </div>
+
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="products.html" class="mobile-nav-link">Products</a>
+      <a href="amc.html" class="mobile-nav-link active">AMC Plans</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-toggles-row">
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <button type="button" class="icon-btn" data-toggle-theme aria-label="Toggle Theme in Mobile Drawer">
+            <svg class="theme-icon-sun" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+            </svg>
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button type="button" class="icon-btn" data-toggle-rtl aria-label="Toggle RTL in Mobile Drawer">
+            <span class="rtl-text-indicator">RTL</span>
+          </button>
+        </div>
+        <span class="mobile-toggle-badge">Preferences</span>
+      </div>
+      <a href="login.html" class="btn-login" style="width:100%; justify-content:center;" aria-label="Customer Login or Register">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Customer Login / Register</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 4. Global Auth Modal (Login / Register) -->
+  <div class="modal-overlay" id="authModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="auth-modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Customer Portal</h3>
+        <button type="button" class="modal-close" aria-label="Close Modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-tabs" role="tablist">
+          <button type="button" class="auth-tab-btn active" data-tab="login" role="tab" aria-selected="true">Sign
+            In</button>
+          <button type="button" class="auth-tab-btn" data-tab="register" role="tab" aria-selected="false">New
+            Registration</button>
+        </div>
+
+        <form id="authPanel-login" class="auth-form-panel active"
+          onsubmit="event.preventDefault(); alert('Signed in successfully!');">
+          <div class="form-group">
+            <label class="form-label" for="amcloginEmail">Email or Mobile Number</label>
+            <input type="text" id="amcloginEmail" class="form-input" placeholder="e.g. user@home.com or 9876543210"
+              required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="amcloginPass">Password</label>
+            <input type="password" id="amcloginPass" class="form-input" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn-auth-submit">Sign In to Service Account</button>
+        </form>
+
+        <form id="authPanel-register" class="auth-form-panel"
+          onsubmit="event.preventDefault(); alert('Account created! You can now book service visits.');">
+          <div class="form-group">
+            <label class="form-label" for="amcregName">Full Name</label>
+            <input type="text" id="amcregName" class="form-input" placeholder="e.g. Rajesh Kumar" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="amcregPhone">Mobile Number (For Technician Updates)</label>
+            <input type="tel" id="amcregPhone" class="form-input" placeholder="10-digit mobile number" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="amcregDevice">Primary Equipment at Home</label>
+            <select id="amcregDevice" class="form-input">
+              <option value="inverter">Home Inverter &amp; Battery System</option>
+              <option value="generator">Home Backup Generator (1-10 kVA)</option>
+              <option value="both">Both Generator &amp; Inverter</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-auth-submit">Create Residential Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT: EXACTLY 5 MAIN CONTENT SECTIONS -->
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1: HERO OVERVIEW & VALUE PROPOSITION
+         ========================================================================== -->
+    <section class="page-inner-hero" aria-label="AMC Plans Overview">
+      <img src="assets/images/sections/amc-hero-protection.jpg"
+        alt="Certified engineer conducting annual maintenance inspection" class="page-inner-hero-bg" width="1920"
+        height="600" loading="eager">
+
+      <div class="page-inner-hero-container">
+        <!-- Breadcrumb Navigation -->
+        <nav class="hero-breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="hero-breadcrumb-sep">/</span>
+          <span class="hero-breadcrumb-current">AMC Plans</span>
+        </nav>
+
+        <h1 class="page-inner-hero-title">
+          Residential Power AMC Protection Plans
+        </h1>
+
+        <p class="page-inner-hero-desc">
+          Predictable annual maintenance, quarterly proactive visits, battery acid leveling, and priority emergency
+          response for domestic peace of mind.
+        </p>
+
+        <!-- Trust Badges Row -->
+        <div class="hero-trust-pills-row">
+          <div class="hero-trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span>Zero Callout Charges</span>
+          </div>
+          <div class="hero-trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <span>4 Scheduled Visits / Year</span>
+          </div>
+          <div class="hero-trust-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span>Priority Breakdown Queue</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: 3 CLEAR RESIDENTIAL AMC TIER CARDS
+         ========================================================================== -->
+    <section class="site-section" aria-label="AMC Packages">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Predictable Fixed Annual Pricing</span>
+          <h2 class="section-title">Select Your Household Protection Tier</h2>
+          <p class="section-subtitle">
+            Transparent coverage tailored for apartments, standalone houses, and large residential estates.
+          </p>
+        </div>
+
+        <div class="amc-grid-3">
+          <!-- Tier 1 -->
+          <article class="amc-plan-card">
+            <div class="amc-img-frame">
+              <img src="assets/images/sections/p17.jpg" alt="Apartment pure sine wave inverter care plan" width="400"
+                height="200" loading="lazy">
+            </div>
+            <div class="amc-plan-body">
+              <div class="amc-plan-content">
+                <h3 class="amc-plan-title">Flat &amp; 2BHK Care</h3>
+                <div class="amc-plan-for">Ideal For: Single Inverter + 1 Tubular Battery</div>
+                <div class="amc-price-box">
+                  <span class="amc-price-amount">&#8377;1,899</span>
+                  <span class="amc-price-period">/ year (Inc. GST)</span>
+                </div>
+                <ul class="amc-perks-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>3 Scheduled Visits:</strong> Full board &amp; cell gravity tests.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Free Distilled Water:</strong> 10 Liters laboratory top-up.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Zero Callout Fees:</strong> For all emergency power cuts.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>4-Hour Response:</strong> Guaranteed doorstep technician arrival.</span>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" class="btn-secondary w-full" data-open-auth>Activate Flat Plan</button>
+            </div>
+          </article>
+
+          <!-- Tier 2: Featured -->
+          <article class="amc-plan-card featured-plan">
+            <span class="amc-badge-popular">MOST POPULAR</span>
+            <div class="amc-img-frame">
+              <img src="assets/images/sections/p18.jpg" alt="Villa power shield inverter and generator plan" width="400"
+                height="200" loading="lazy">
+            </div>
+            <div class="amc-plan-body">
+              <div class="amc-plan-content">
+                <h3 class="amc-plan-title">Villa Power Shield</h3>
+                <div class="amc-plan-for">Ideal For: Inverter + 2-3kVA Generator System</div>
+                <div class="amc-price-box">
+                  <span class="amc-price-amount">&#8377;3,499</span>
+                  <span class="amc-price-period">/ year (Inc. GST)</span>
+                </div>
+                <ul class="amc-perks-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>4 Scheduled Visits:</strong> Seasonal pre-monsoon inspection.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Engine Oil Flush:</strong> 1 Free synthetic generator oil change.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Standby Loaner Unit:</strong> Provided if workshop repair needed.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>60-Min Priority Dispatch:</strong> 24/7 emergency dispatch line.</span>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" class="btn-primary w-full" data-open-auth>Activate Villa Shield</button>
+            </div>
+          </article>
+
+          <!-- Tier 3 -->
+          <article class="amc-plan-card">
+            <div class="amc-img-frame">
+              <img src="assets/images/sections/p19.jpg" alt="Complete residential estate and AMF comprehensive care"
+                width="400" height="200" loading="lazy">
+            </div>
+            <div class="amc-plan-body">
+              <div class="amc-plan-content">
+                <h3 class="amc-plan-title">Estate Comprehensive</h3>
+                <div class="amc-plan-for">Ideal For: Large Villas, Duplex &amp; AMF Automation</div>
+                <div class="amc-price-box">
+                  <span class="amc-price-amount">&#8377;6,999</span>
+                  <span class="amc-price-period">/ year (Inc. GST)</span>
+                </div>
+                <ul class="amc-perks-list">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>6 Scheduled Visits:</strong> Bi-monthly complete power audit.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>AMF Changeover Care:</strong> Automatic relay &amp; surge testing.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>100% Free Labor on Repairs:</strong> Plus 20% discount on OEM parts.</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>30-Min VIP Dispatch:</strong> Dedicated resident account engineer.</span>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" class="btn-secondary w-full" data-open-auth>Activate Estate Total</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: WHAT'S COVERED VS EXCLUSIONS (Transparent Side-by-Side Matrix)
+         ========================================================================== -->
+    <section class="site-section" aria-label="Coverage Inclusions">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Zero Fine Print</span>
+          <h2 class="section-title">Clear Coverage Breakdown</h2>
+          <p class="section-subtitle">
+            We believe in 100% transparent terms with zero hidden charges when a blackout hits your home.
+          </p>
+        </div>
+
+        <div class="coverage-matrix-container">
+          <!-- Inclusions -->
+          <div class="coverage-table-box included">
+            <div class="coverage-table-header">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>What Is Fully Covered in Every AMC</span>
+            </div>
+            <ul class="coverage-table-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>All doorstep service callout charges and emergency breakdown labor fees.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Routine electrolyte replenishment using demineralized laboratory distilled water.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Terminal cleaning, anti-corrosion petroleum gel coating, and bolt re-torquing.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Generator spark plug cleaning, carburetor pilot jet flush, and air filter dusting.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Inverter output voltage calibration ensuring pure 230V sine wave for home electronics.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Standby loaner inverter unit provided during major workshop motherboard overhauls.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Exclusions -->
+          <div class="coverage-table-box excluded">
+            <div class="coverage-table-header">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+              </svg>
+              <span>Fair Exclusions (Not Covered)</span>
+            </div>
+            <ul class="coverage-table-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2.5">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span>Physical breakage or casing cracks caused by accidental external falls or moving.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2.5">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span>Flooding or water immersion of equipment placed directly on low outdoor ground.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2.5">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span>Tampering or attempted circuit modifications by unverified third-party handymen.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="2.5">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <span>Replacement of fully aged battery packs exceeding their 5-year chemical lifespan.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: 4 SEASONAL PREVENTIVE HEALTH MILESTONES (Visual Timeline)
+         ========================================================================== -->
+    <section class="site-section" aria-label="Seasonal Milestones">
+      <div class="container seasonal-wrap">
+        <div class="seasonal-img-frame">
+          <img src="assets/images/sections/p20.jpg" alt="Certified technician carrying out seasonal maintenance checkup"
+            width="600" height="440">
+        </div>
+
+        <div>
+          <span class="section-tag">Preventive Cadence</span>
+          <h2 class="section-title">The 4 Seasonal Health Milestones</h2>
+          <p class="section-subtitle">
+            Automated seasonal checkups scheduled right before peak climate stress.
+          </p>
+
+          <div class="seasonal-milestones-list">
+            <div class="season-milestone-item">
+              <span class="season-num-badge">Q1 &bull; Summer</span>
+              <div class="season-milestone-body">
+                <h4 class="season-milestone-title">Heatwave Load Test</h4>
+                <p class="season-milestone-desc">Thermal imaging of heatsinks and peak high-ambient stress run.</p>
+              </div>
+            </div>
+
+            <div class="season-milestone-item">
+              <span class="season-num-badge">Q2 &bull; Monsoon</span>
+              <div class="season-milestone-body">
+                <h4 class="season-milestone-title">Surge &amp; Grounding Audit</h4>
+                <p class="season-milestone-desc">Earth pit resistance check, moisture seal and relay cleaning.</p>
+              </div>
+            </div>
+
+            <div class="season-milestone-item">
+              <span class="season-num-badge">Q3 &bull; Post-Monsoon</span>
+              <div class="season-milestone-body">
+                <h4 class="season-milestone-title">Battery Desulfation &amp; Gravity</h4>
+                <p class="season-milestone-desc">Deep cell equalizing charge to restore electrolyte chemistry.</p>
+              </div>
+            </div>
+
+            <div class="season-milestone-item">
+              <span class="season-num-badge">Q4 &bull; Winter</span>
+              <div class="season-milestone-body">
+                <h4 class="season-milestone-title">Cold-Weather Crank Tuning</h4>
+                <p class="season-milestone-desc">Choke calibration and fuel stabilizer to prevent start delays.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: INSTANT AMC ACTIVATION CTA (Final Content Section)
+         ========================================================================== -->
+    <section class="site-section" aria-label="Activate AMC">
+      <div class="container">
+        <div class="amc-cta-box">
+          <span class="section-tag">
+            30-Day Money Back Guarantee
+          </span>
+          <h2 class="amc-cta-title">
+            Protect Your Home Power Today
+          </h2>
+          <p class="amc-cta-desc">
+            Sign up in under 2 minutes. Our technician will visit for an onboarding baseline inspection, tag your
+            equipment with a QR code, and activate your priority emergency dispatch guarantee.
+          </p>
+          <div class="amc-cta-actions">
+            <button type="button" class="btn-primary" data-open-auth>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Activate Home AMC Online</span>
+            </button>
+            <a href="tel:18004197693" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>Consult AMC Manager: 1800&#8209;419&#8209;7693</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scroll-To-Top Button -->
+  <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-identity">
+            <svg class="brand-logo-svg" viewBox="0 0 48 48" fill="none">
+              <rect width="48" height="48" rx="12" fill="#0f172a" />
+              <path d="M24 8L10 19V38C10 39.1 10.9 40 12 40H36C37.1 40 38 39.1 38 38V19L24 8Z" stroke="#f59e0b"
+                stroke-width="2.5" stroke-linejoin="round" />
+              <path d="M26 16L18 25H25L23 33L31 22H24L26 16Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="1" />
+              <path d="M14 36C18 36 18 33 22 33C26 33 26 36 30 36C34 36 34 33 36 33" stroke="#38bdf8" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+            <div class="brand-text-block">
+              <span class="brand-title">Resi<span>Volt</span></span>
+              <span class="brand-tagline">Home Power Care</span>
+            </div>
+          </a>
+          <p>
+            Dedicated home generator and residential inverter care center. Providing doorstep repair, battery health
+            checks, periodic servicing, and AMC coverage for uninterrupted residential power.
+          </p>
+          <div class="footer-emergency-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>Emergency Home Line: 1800&#8209;419&#8209;7693</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Home Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#generator-repair">Home Generator Repair</a></li>
+            <li><a href="services.html#inverter-service">Inverter Sine Wave Service</a></li>
+            <li><a href="services.html#battery-health">Tubular &amp; Lithium Battery Care</a></li>
+            <li><a href="services.html#installation">Doorstep Installation</a></li>
+            <li><a href="services.html#amc-maintenance">Pre-Monsoon Health Check</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About ResiVolt</a></li>
+            <li><a href="products.html">Home Generators &amp; Inverters</a></li>
+            <li><a href="amc.html">Residential AMC Plans</a></li>
+            <li><a href="contact.html">Service Coverage Map</a></li>
+            <li><a href="contact.html#book">Book Service Visit</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Service Support</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Doorstep coverage across all central residential zones and suburbs</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Mon – Sun: 7:30 AM – 9:30 PM (24/7 Breakdown Dispatch)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 ResiVolt Power Care. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Safety Standards</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
