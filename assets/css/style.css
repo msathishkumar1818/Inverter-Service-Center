@@ -1933,15 +1933,18 @@ button, input, select, textarea {
   font-weight: 800;
   padding: 0.8rem 1.5rem;
   border-radius: var(--radius-full);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-  transition: transform var(--transition-fast), background var(--transition-fast);
+  transition: transform var(--transition-fast), background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
   white-space: nowrap;
   line-height: 1.2;
 }
 
 .btn-emergency-call:hover {
-  background: var(--accent-light);
+  background: #fef3c7;
+  border-color: var(--accent-primary);
+  color: #0f172a !important;
   transform: translateY(-2px);
 }
 
@@ -1951,12 +1954,51 @@ button, input, select, textarea {
   color: #dc2626;
   flex-shrink: 0;
   display: block;
+  transition: transform var(--transition-fast);
+}
+
+.btn-emergency-call:hover svg {
+  transform: scale(1.08);
 }
 
 .btn-emergency-call span {
   white-space: nowrap;
   display: inline-block;
   line-height: 1;
+  color: inherit;
+}
+
+/* Dark Mode - High Contrast Crisp White Text & Ambient Glow Hover */
+html.dark .btn-emergency-call,
+[data-theme="dark"] .btn-emergency-call {
+  background: var(--bg-surface, #0a0a0a) !important;
+  border: 1px solid var(--border-strong, #383838) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .btn-emergency-call svg,
+[data-theme="dark"] .btn-emergency-call svg {
+  color: #ef4444;
+}
+
+html.dark .btn-emergency-call span,
+[data-theme="dark"] .btn-emergency-call span {
+  color: #ffffff !important;
+}
+
+html.dark .btn-emergency-call:hover,
+[data-theme="dark"] .btn-emergency-call:hover {
+  background: rgba(245, 158, 11, 0.22) !important;
+  border-color: var(--accent-primary, #f59e0b) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.25);
+  transform: translateY(-2px);
+}
+
+html.dark .btn-emergency-call:hover span,
+[data-theme="dark"] .btn-emergency-call:hover span {
+  color: #ffffff !important;
 }
 
 /* ==========================================================================
