@@ -1186,7 +1186,16 @@
 
   .service-actions-grid-4 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 0;
+  }
+
+  .service-action-card:nth-child(1),
+  .service-action-card:nth-child(2) {
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .service-action-card:nth-child(2n) {
+    border-right: none;
   }
 }
 
@@ -1197,7 +1206,16 @@
 
   .service-actions-grid-4 {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 0;
+  }
+
+  .service-action-card {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .service-action-card:last-child {
+    border-bottom: none;
   }
 
   .service-action-img-wrap {
@@ -1533,6 +1551,14 @@
   .zones-live-map {
     height: 300px;
     min-height: 300px;
+  }
+
+  .zones-floating-pill {
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.85rem;
+    max-width: calc(100% - 2rem);
   }
 
   .booking-form-box {

@@ -2795,29 +2795,41 @@ html.dark .h2-live-dispatch-meta,
   line-height: 1.45;
 }
 
-/* Service Actions 4-Card Grid (Section 4) */
+/* Service Actions 4-Card Grid (Section 4) - Seamless Connected Strip */
 .service-actions-grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  background: var(--bg-surface);
 }
 
 .service-action-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 1.25rem;
-  box-shadow: var(--shadow-sm);
+  border: none;
+  border-right: 1px solid var(--border-light);
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.service-action-card:last-child {
+  border-right: none;
 }
 
 .service-action-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-primary);
-  box-shadow: var(--shadow-xl);
+  background: var(--bg-card);
+}
+
+.service-action-card:hover .service-action-title {
+  color: var(--accent-primary);
 }
 
 .service-action-title {
@@ -2825,20 +2837,23 @@ html.dark .h2-live-dispatch-meta,
   font-weight: 700;
   color: var(--text-primary);
   text-align: center;
-  margin-bottom: 0.85rem;
-  min-height: 2.75rem;
+  padding: 1.25rem 1rem 1rem;
+  margin-bottom: 0;
+  min-height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1.35;
+  transition: color var(--transition-fast);
 }
 
 .service-action-img-wrap {
   width: 100%;
-  height: 220px;
-  border-radius: var(--radius-md);
+  height: 230px;
+  border-radius: 0;
   overflow: hidden;
   background: var(--bg-elevated);
+  margin-top: auto;
 }
 
 .service-action-img-wrap img {
@@ -4489,7 +4504,7 @@ html.dark .booking-feedback-alert {
 
 .zones-floating-pill {
   position: absolute;
-  top: 1.5rem;
+  bottom: 1.5rem;
   left: 1.5rem;
   background: rgba(15, 23, 42, 0.92);
   color: #ffffff;
@@ -4505,6 +4520,7 @@ html.dark .booking-feedback-alert {
   z-index: 2;
   pointer-events: none;
   box-shadow: var(--shadow-md);
+  max-width: calc(100% - 3rem);
 }
 
 .zones-floating-pill .pulse-indicator {
