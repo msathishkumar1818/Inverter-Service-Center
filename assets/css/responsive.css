@@ -90,6 +90,17 @@
   .testimonials-grid-3 {
     grid-template-columns: 1fr;
   }
+
+  .services-grid-4,
+  .products-grid,
+  .amc-passes-grid,
+  .amc-features-grid,
+  .symptom-grid,
+  .about-stats-grid,
+  .dispatch-hubs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.75rem !important;
+  }
 }
 
 /* Tablets Portrait (768px - 820px - iPad Mini, iPad Air, iPad 10th gen) */
@@ -371,6 +382,23 @@
     box-sizing: border-box !important;
   }
 
+  /* 4-Card Service & Product Grids on iPad / Tablets: 2 Columns for spacious readability */
+  .services-grid-4,
+  .products-grid,
+  .amc-passes-grid,
+  .amc-features-grid,
+  .symptom-grid,
+  .about-stats-grid,
+  .dispatch-hubs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.75rem !important;
+  }
+
+  .service-card-img-wrap,
+  .product-card-img-wrap {
+    height: 220px !important;
+  }
+
   /* Home 2 Hero - Full Page on iPad Mini & Tablets */
   .h2-hero-section {
     min-height: calc(100vh - var(--header-height)) !important;
@@ -595,6 +623,22 @@
 
 /* Mobile Devices (Screen widths under 768px: iPhone, Galaxy, Pixel) */
 @media (max-width: 767px) {
+  .services-grid-4,
+  .products-grid,
+  .amc-passes-grid,
+  .amc-features-grid,
+  .symptom-grid,
+  .about-stats-grid,
+  .dispatch-hubs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .service-card-img-wrap,
+  .product-card-img-wrap {
+    height: 210px !important;
+  }
+
   .footer-grid {
     display: grid !important;
     grid-template-columns: 1fr !important;
@@ -1270,7 +1314,14 @@
 
   .hardware-specs-list li .spec-label,
   .hardware-specs-list li span:first-child {
-    flex: 0 0 105px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .hardware-specs-list li .spec-value,
+  .hardware-specs-list li span:last-child {
+    white-space: normal;
+    text-align: right;
   }
 
   .battery-system-img {
