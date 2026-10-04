@@ -529,7 +529,40 @@ button, input, select, textarea {
   letter-spacing: 0.05em;
 }
 
-/* Login Button Replacing Generic CTA */
+/* Primary Navigation CTA Button (Redirects to Booking Form) */
+.nav-cta-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, #b45309 100%);
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  padding: 0.55rem 1.25rem !important;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 12px var(--accent-glow);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
+  white-space: nowrap;
+  text-decoration: none !important;
+  line-height: 1.2;
+}
+
+.nav-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--accent-glow);
+  opacity: 0.96;
+}
+
+.nav-cta-btn svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+/* Fallback Login Button */
 .btn-login {
   display: inline-flex;
   align-items: center;

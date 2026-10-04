@@ -40,17 +40,15 @@
     display: inline-flex !important;
   }
 
-  /* Completely remove Dark Mode, RTL button, and Login button from header on iPad Mini, iPad Pro & iPad Pro 13 */
-  .site-header .header-actions .icon-btn,
-  .site-header .header-actions .btn-login {
+  /* Remove Dark Mode and RTL button from header on tablet (available in drawer) */
+  .site-header .header-actions .icon-btn {
     display: none !important;
   }
 }
 
 /* Tablets Landscape & Smaller Laptops (1024px) */
 @media (max-width: 1024px) {
-  .site-header .header-actions .icon-btn,
-  .site-header .header-actions .btn-login {
+  .site-header .header-actions .icon-btn {
     display: none !important;
   }
 
@@ -775,9 +773,10 @@
     gap: 0.5rem;
   }
 
+  .nav-cta-btn,
   .btn-login {
-    padding: 0.45rem 0.85rem;
-    font-size: 0.8125rem;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.8125rem !important;
   }
 
   .brand-tagline {
@@ -905,6 +904,11 @@
     height: 28px;
   }
 
+  .nav-cta-btn {
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.8rem !important;
+  }
+  
   .btn-login span {
     display: none;
   }
